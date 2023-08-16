@@ -27,7 +27,7 @@ This is a project for fun and is not a final product. There's a lot that can be 
 **Take results with a grain of** 🧂
 ''')
 
-st.sidebar.markdown("For more on how this app works, check out my [post on Medium](https://medium.com/@zhaojj1014/developing-an-ai-powered-content-generation-app-for-small-businesses-dd3abae358e0) ")
+st.sidebar.markdown("For more on how this app works, check out my [post on Medium](https://medium.com/@zhaojj1014/developing-an-ai-powered-content-generation-app-for-small-businesses-dd3abae358e0) or the source code on [Github](https://github.com/zhaojj1014/PubMed_Pal/tree/main).")
 
 st.sidebar.divider()
 
