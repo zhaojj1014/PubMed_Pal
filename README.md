@@ -2,7 +2,7 @@
 
 ## Description
 
-👋 Welcome to PubMed Pal! 
+👋 Welcome to [PubMed Pal](https://pubmedpal.streamlit.app/)! 
 
 I created this app to help small business owners to create educational blog posts for their target customers. 
 This is a project for fun and is not a final product. There's a lot that can be improved to make this app better. 🤗 
