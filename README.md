@@ -14,6 +14,6 @@ The app is developed using Streamlit for frontend, and PubMed API and Openai API
 ![PubMed Pal Thumbnail](https://github.com/zhaojj1014/PubMed_Pal/assets/79023207/aa6efd97-338f-4f31-80cb-fe4c6ef05173)
 
 
-For more on how this app works, check out my [post on Medium](https://medium.com/@zhaojj1014/developing-an-ai-powered-content-generation-app-for-small-businesses-dd3abae358e0)
+For more on how this app works, check out my [post on Medium](https://medium.com/@zhaojj1014/developing-an-ai-powered-content-generation-app-for-small-businesses-dd3abae358e0).
 
 
