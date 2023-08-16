@@ -1,13 +1,12 @@
 import streamlit as st
 import requests
-import time
 import re
 import openai
-import os
+# import os
 
 from search_articles import parse_keywords, search_articles, get_articles_xml, parse_articles_info, select_articles, get_citation_xml, parse_citation
 
-openai.organization = os.getenv("OPENAI_ORGANIZATION")
+# openai.organization = os.getenv("OPENAI_ORGANIZATION")
 
 def get_completion(messages, model="gpt-3.5-turbo"):
     response = openai.ChatCompletion.create(
