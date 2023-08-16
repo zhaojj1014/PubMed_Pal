@@ -1,4 +1,4 @@
-# PubMed Pal - an AI-Powered Content Generation App for Small Businesses
+# PubMed Pal: an AI-Powered Content Generation App for Small Businesses
 
 ## Description
 
