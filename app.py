@@ -131,7 +131,7 @@ if api_key:
                     
                 # Warning message at the end
                 st.divider()
-                st.markdown("**Make sure to validate the generated content by looking up the referenced articles in [PubMed](https://pubmed.ncbi.nlm.nih.gov/)!**")
+                st.markdown("⚠️ **Make sure to validate the generated content by looking up the referenced articles in [PubMed](https://pubmed.ncbi.nlm.nih.gov/)!**")
                 
 
 
