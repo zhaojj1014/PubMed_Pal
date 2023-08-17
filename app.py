@@ -2,11 +2,8 @@ import streamlit as st
 import requests
 import re
 import openai
-# import os
 
 from search_articles import parse_keywords, search_articles, get_articles_xml, parse_articles_info, select_articles, get_citation_xml, parse_citation
-
-# openai.organization = os.getenv("OPENAI_ORGANIZATION")
 
 def get_completion(messages, model="gpt-3.5-turbo"):
     response = openai.ChatCompletion.create(
@@ -55,6 +52,10 @@ if api_key:
                          placeholder="acupuncture, menopause")
     audience = st.text_input("Who is the target audience?",
                             placeholder="women")
+
+    purpose = st.text_input("What would you like to educate the audience about?",
+                            placeholder="benefits and efficacy of acupuncture to relieve menopausal symptoms")
+    
     generate_button = st.button("Generate article!")
     
     if generate_button:
@@ -105,23 +106,16 @@ if api_key:
                                                     and share the knowledge in plain English language that\'s easy to understand by a high school student. \
                                                     You want to educate people about the benefits of nutrition, exercise and healthy lifestyle.'},
                         {'role':'user', 'content':f'You are going to write an educational blog post based on the summaries provided below delimited in triple backticks. \
-                            You will focus on {topic}. Your writing is tailored to {audience}. \
+                            You will focus on the findings in each summary. The blog post is to educate {audience} about {purpose}. \
                             Summaries: ```{all_articles} ``` \
                             Create a proper title for the blog post. \
-                            Start the article with a hook that grabs the attention of {audience}. \
+                            Start the article with a hook that resonates with {audience}. \
                             The article has less than 400 words and no more than 6 paragraphs. \
                             Do not include references at the end. \
                             Do not include any hyperlinks. '
                         }]
 
                 response = get_completion(messages)
-#                 response = '''# Can Acupuncture Help with Menopause Symptoms?
-
-#     Are you experiencing menopause symptoms and looking for alternative treatment options? Menopausal symptoms, such as hot flashes, night sweats, vaginal dryness, and mood changes, can significantly impact your quality of life. While hormone therapy is commonly used to manage these symptoms, there is growing interest in exploring other nonpharmacologic treatments, including acupuncture.
-
-#     Recent studies have investigated the effectiveness of acupuncture in relieving menopause symptoms. One study published in 2022 found that percutaneous tibial nerve stimulation (PTNS) and electro-acupuncture near the tibial nerve increased vaginal blood perfusion and serum estrogen levels in a rat model. These findings suggest that acupuncture may have potential benefits for menopausal women by mitigating harmful reproductive and systemic changes associated with reduced ovarian activity and estrogen levels.
-#     '''
-
 
                 st.success('Article Generated!')
 
@@ -145,12 +139,5 @@ if api_key:
             st.text("I can't find enough recent articles about this topic. Try another topic!")
 
 else: st.text("Please enter your OpenAI API key to proceed.")
-
-# topic = st.sidebar.text_input("What topic would you like to write about?", autocomplete="acupuncture, menopause")
-# audience = st.sidebar.text_input("Who is the target audience?", autocomplete="women")
-# generate_button = st.sidebar.button("Generate article!")
-
-
-    
 
 
