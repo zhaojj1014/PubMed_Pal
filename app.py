@@ -32,7 +32,8 @@ st.sidebar.markdown("## How to use\n"
             "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below.\n"
             "2. Enter keywords to search research articles.\n"
             "3. Describe the target audience.\n"
-            "4. Validate the result.")
+            "4. Describe what you'd like to educate the audience about. \n"
+            "5. Validate the result.")
 
 
 api_key = st.sidebar.text_input("Enter your OpenAI API key:",
