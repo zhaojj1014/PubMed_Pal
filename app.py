@@ -2,10 +2,9 @@ import streamlit as st
 import requests
 import re
 import openai
+from openai import OpenAI
 
 from search_articles import parse_keywords, search_articles, get_articles_xml, parse_articles_info, select_articles, get_citation_xml, parse_citation
-
-client = OpenAI()
 
 def get_completion(messages, model="gpt-3.5-turbo"):
     response = client.chat.completions.create(
@@ -49,7 +48,7 @@ st.sidebar.divider()
 st.sidebar.markdown("Made by [Jinjing Zhao](https://www.linkedin.com/in/jinjing-zhao-82622254/)")
 
 if api_key:
-    openai.api_key = api_key
+    client = OpenAI(api_key = api_key)
     
     topic = st.text_input("What topic would you like to write about?",
                          placeholder="acupuncture, menopause")
