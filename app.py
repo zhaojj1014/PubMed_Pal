@@ -5,8 +5,10 @@ import openai
 
 from search_articles import parse_keywords, search_articles, get_articles_xml, parse_articles_info, select_articles, get_citation_xml, parse_citation
 
+client = OpenAI()
+
 def get_completion(messages, model="gpt-3.5-turbo"):
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model=model,
         messages=messages,
         max_tokens=800,
